@@ -1,0 +1,156 @@
+{% extends "layout.html" %}
+{% block content %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Score</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/static/css/sign.css">
+  </head>
+   <body>
+      <title>Churn Prediction</title>
+	  <div class="container">
+		<div class="row">
+            <div class="cont">
+                <h1>Score Checker</h1><hr>
+		  <form action="{{ url_for('submit') }}" method="POST">
+		  	<div class="col-sm-9">
+			 <div class="form-group  purple-border">
+				  <label for="comment">SeniorCitizen:</label>
+				  <textarea class=" mx-auto form-control" rows="1" id="query1" name="query1" rows="1" cols="10" required>{{query1}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">MonthlyCharges:</label>
+				  <textarea class="form-control" rows="1" id="query2" name="query2" rows="2" cols="10" required>{{query2}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">TotalCharges:</label>
+				  <textarea class="form-control" rows="1" id="query3" name="query3" rows="2" cols="10" required>{{query3}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">gender:</label>
+				  <textarea class="form-control" rows="1" id="query4" name="query4" rows="2" cols="10" required>{{query4}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">Partner:</label>
+				  <textarea class="form-control" rows="1" id="query5" name="query5" rows="2" cols="5" required>{{query5}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">Dependents:</label>
+				  <textarea class="form-control" rows="1" id="query6" name="query6" rows="2" cols="10" required>{{query6}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">PhoneService:</label>
+				  <textarea class="form-control" rows="1" id="query7" name="query7" rows="2" cols="10" required>{{query7}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">MultipleLines:</label>
+				  <textarea class="form-control" rows="1" id="query8" name="query8" rows="2" cols="10" required>{{query8}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">InternetService:</label>
+				  <textarea class="form-control" rows="1" id="query9" name="query9" rows="2" cols="10" required>{{query9}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">OnlineSecurity:</label>
+				  <textarea class="form-control" rows="1" id="query10" name="query10" rows="2" cols="10" required>{{query10}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">OnlineBackup:</label>
+				  <textarea class="form-control" rows="1" id="query11" name="query11" rows="2" cols="10" required>{{query11}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">DeviceProtection:</label>
+				  <textarea class="form-control" rows="1" id="query12" name="query12" rows="2" cols="10" required>{{query12}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">TechSupport:</label>
+				  <textarea class="form-control" rows="1" id="query13" name="query13" rows="2" cols="10" required>{{query13}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">StreamingTV:</label>
+				  <textarea class="form-control" rows="1" id="query14" name="query14" rows="2" cols="10" required>{{query14}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">StreamingMovies:</label>
+				  <textarea class="form-control" rows="1" id="query15" name="query15" rows="2" cols="10" required>{{query15}}</textarea>
+			</div>
+			<!--
+			<div class="form-group  purple-border">
+				  <label for="comment">Contract:</label>
+				  <textarea class="form-control" rows="1" id="query16" name="query16" rows="2" cols="10" required>{{query16}}</textarea>
+			</div>
+			-->
+			<div class="form-group  purple-border">
+			<label for="query16">Contract:</label>
+					<select id="query16" name="query16">
+					<option value="Month-to-month">Month-to-month</option>
+					<option value="One year">One year</option>
+					<option value="Two year">Two year</option>
+					
+					</select>
+			</div>
+			<!--
+			<div class="form-group  purple-border">
+				  <label for="comment">PaperlessBilling:</label>
+				  <textarea class="form-control" rows="1" id="query17" name="query17" rows="2" cols="10" required>{{query17}}</textarea>
+			</div>
+		-->
+
+		<div class="form-group  purple-border">
+			<label for="comment">PaperlessBilling:</label><br>
+			<input type="radio" id="" name="query17" value="Yes">
+			<label for="Yes">Yes</label>
+			<input type="radio" id="" name="query17" value="No">
+			<label for="No">No</label><br>
+		</div>
+		<!--
+			<div class="form-group  purple-border">
+				  <label for="comment">PaymentMethod:</label>
+				  <textarea class="form-control" rows="1" id="query18" name="query18" rows="2" cols="10" required>{{query18}}</textarea>
+			</div>
+			
+			-->
+			<div class="form-group  purple-border">
+				<label for="query18">PaymentMethod:</label>
+						<select id="query18" name="query18">
+						<option value="Mailed check">Mailed check</option>
+						<option value="Electronic check">Electronic check</option>
+						<option value="Credit card (automatic)">Credit card (automatic)</option>
+						<option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
+						
+						</select>
+				</div>
+				<!--
+			<div class="form-group  purple-border">
+				<label for="comment">PaymentMethod:</label><br>
+				<input type="radio" id="" name="query18" value="Mailed check">
+				<label for="Mailed check">Mailed check</label><br>
+				<input type="radio" id="" name="query18" value="Credit card (automatic)">
+				<label for="Credit card (automatic)">Credit card (automatic)</label><br>
+				<input type="radio" id="" name="query18" value="Bank transfer (automatic)">
+				<label for="Bank transfer (automatic)">Bank transfer (automatic)</label><br>
+				<input type="radio" id="" name="query18" value="Electronic check">
+				<label for="Electronic check">Electronic check</label><br>
+			</div>
+              -->
+			<div class="form-group  purple-border">
+				  <label for="comment">tenure:</label>
+				  <textarea class="form-control" rows="1" id="query19" name="query19" rows="2" cols="10" required>{{query19}}</textarea>
+			</div>
+			</div>
+            <br><br>
+			<div class="col-sm-3">
+                <input type="submit" value="Submit">
+			</div>
+            <br><br>
+		  </form>
+		  </div>
+		  </div>>
+		
+	</div>		
+   </body>
+</html>
+{% endblock %}

@@ -1,0 +1,105 @@
+body
+{
+    background-color:#62B6B7
+}
+li a:hover {
+    
+    color: black !important;
+    padding: 10px;
+    margin :10px;
+  }
+nav .navbar-nav li a{
+    color: white !important;
+    padding :20px 300px;
+    margin-top: 0px;
+    }
+
+
+ h1{
+    color:#735F32;
+    text-align: center;
+    margin:20px;
+    font-stretch: expanded;
+ }
+ h5
+ {
+    color: #5F8D4E;
+     
+ }
+ hr
+ {
+    border-top: 15px dotted ;
+    width:20%;
+     margin-left: 40%;
+     margin-right: 10%;    
+ }
+ p{
+    padding:5px;
+    text-align: center;
+ }
+
+ .cont{
+    
+     text-align: center; 
+     background-color: aliceblue;
+     width:50%;
+     margin-top: 40px;
+     margin-left: 25%;
+     margin-right: 25%;
+
+ }
+
+ .box
+ {
+    
+    height:60vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    color:white
+ }
+ .textarea 
+ {
+   padding:10px;
+   text-align: center;
+   align-items: center;
+   border-radius: 5px;
+   border: 1px solid gray;
+   background-color: rgb(237, 234, 234);
+ }
+
+ 
+ select {
+   padding: 10px;
+   font-size: 18px;
+   border-radius: 5px;
+   border: 1px solid gray;
+   background-color: rgba(192, 192, 192, 0.823);
+   width:120px;
+   background-repeat: no-repeat;
+   background-position: left 10px center;
+ }
+
+ .ele
+ {
+    text-align: center;
+    position: center;
+ }
+
+  label
+  {
+   position: center;
+  }
+ .submit {
+   padding: 10px;
+   font-size: 18px;
+   border-radius: 5px;
+   border: 1px solid gray;
+   background-color: rgb(237, 234, 234);
+   width:120px;
+   background-repeat: no-repeat;
+   background-position: left 10px center;
+   position: center;
+ }
